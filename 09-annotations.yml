@@ -3,10 +3,10 @@ kind: Pod
 metadata:
   name: annotations-demo
   annotations:
-    imageregistry: "https://hub.docker.com/"
+     imageregistry: "https://hub.docker.com/"
 spec:
   containers:
   - name: nginx
     image: nginx:1.14.2
     ports:
-    - containersPort: 80
+    - containerPort: 80
