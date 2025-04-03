@@ -7,11 +7,14 @@ spec:
     - name: debug
       image: docker.io/rkalluru/learnk8s:init-container-html-generator
       volumeMounts:
-      - mountpath: /mnt/html
+      - mountPath: /mnt/html
         name: html
   containers:
     - name: nginx
       image: nginx
-      volumes:
-        - name: html
-          emptyDir: {}
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: html
+  volumes:
+    - name: html
+      emptyDir: {}
