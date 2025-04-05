@@ -15,7 +15,7 @@ spec:
       containers:
       - name: hpa
         image: rkalluru/hpa
-        imagePullPolicy: always
+        imagePullPolicy: Always
         resources:
           requests:
             memory: "64Mi"
