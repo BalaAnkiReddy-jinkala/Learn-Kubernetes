@@ -58,3 +58,4 @@ spec:
     - name: foo
       configMap:
         name: sample-data
+...
