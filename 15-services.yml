@@ -10,7 +10,7 @@ spec:
       image: nginx
 ---
 apiVersion: v1
-knd: Service
+kind: Service
 metadata:
   name: nginx-cip
 spec:
