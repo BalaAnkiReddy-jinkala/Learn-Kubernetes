@@ -13,16 +13,16 @@ spec:
         app: hpa
     spec:
       containers:
-        - name: hpa
-          image: rkalluru/hpa
-          imagePullPolicy: always
-          resources:
-            requests:
-              memory: "64Mi"
-              cpu: "250m"
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
+      - name: hpa
+        image: rkalluru/hpa
+        imagePullPolicy: always
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
