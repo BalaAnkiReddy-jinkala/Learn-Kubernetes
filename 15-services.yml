@@ -51,7 +51,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    appName:nginx
+    appName: nginx
   ports:
     - port: 80
       targetPort: 80
