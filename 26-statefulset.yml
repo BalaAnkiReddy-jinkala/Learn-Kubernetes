@@ -4,7 +4,7 @@ metadata:
   name: web
 spec:
   serviceName: "nginx"
-  replicas: 3
+  replicas: 3  # Number of pods in the StatefulSet
   selector:
     matchLabels:
       app: nginx
@@ -17,7 +17,7 @@ spec:
         - name: nginx
           image: registry.k8s.io/nginx-slim:0.24
           ports:
-            - containersPort: 80
+            - containerPort: 80
               name: web
 ---
 apiVersion: v1
@@ -30,6 +30,6 @@ spec:
   ports:
     - port: 80
       name: web
-  clusterIp: None
+  clusterIP: None
   selector:
     app: nginx
