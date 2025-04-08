@@ -21,7 +21,7 @@ spec:
             memory: "20Mi"
             cpu: "20m"
 ---
-apiVersion: "autoscaling.k8.s.io/v1"
+apiVersion: "autoscaling.k8s.io/v1"
 kind: VerticalPodAutoscaler
 metadata:
   name: vpa-test
