@@ -41,10 +41,10 @@ spec:
         podAffinityTerm:
           labelSelector:
             matchExpressions:
-              - key: security
-                operator: In
-                values:
-                  - S2
+            - key: security
+              operator: In
+              values:
+              - S2
           topologyKey: topology.kubernetes.io/zone
   containers:
   - name: with-pod-affinity
