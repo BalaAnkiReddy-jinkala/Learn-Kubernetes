@@ -16,15 +16,15 @@ spec:
         app: nginx
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.24
-        resources:
-          requests:
-           memory: "64Mi"
-           cpu: "500m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+        - name: nginx
+          image: nginx:1.24
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "500m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
 ---
 apiVersion: v1
 kind: Pod
@@ -41,7 +41,6 @@ spec:
         limits:
           memory: "128Mi"
           cpu: "500m"
-
 ---
 apiVersion: scheduling.k8s.io/v1
 kind: PriorityClass
@@ -49,8 +48,7 @@ metadata:
   name: high-priority
 value: 1000000
 globalDefault: false
-description: "This priority class should be used for XYZ service pods only"
-
+description: "This priority class should be used for XYZ service pods only."
 
 ---
 apiVersion: v1
@@ -59,15 +57,14 @@ metadata:
   name: pod-with-high-priority
 spec:
   containers:
-  - name: nginx
-    image: nginx
-    resources:
-      requests:
-        memory: "64Mi"
-        cpu: "500m"
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
+    - name: nginx
+      image: nginx
+      resources:
+        requests:
+          memory: "64Mi"
+          cpu: "500m"
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
       imagePullPolicy: IfNotPresent
-    priorityClassName: high-priority
-
+  priorityClassName: high-priority
