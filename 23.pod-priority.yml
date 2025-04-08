@@ -29,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: Pod-with-no-priority
+  name: pod-with-no-priority
 spec:
   containers:
     - name: nginx
