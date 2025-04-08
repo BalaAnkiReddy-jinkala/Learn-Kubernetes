@@ -20,7 +20,7 @@ spec:
             - containersPort: 80
               name: web
 ---
-apiversion: v1
+apiVersion: v1
 kind: Service
 metadata:
   name: nginx
