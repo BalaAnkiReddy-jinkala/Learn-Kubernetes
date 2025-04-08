@@ -11,8 +11,8 @@ spec:
     metadata:
       labels:
         app: vpa
-  spec:
-    containers:
+    spec:
+      containers:
       - name: vpa
         image: rkalluru/hpa
         imagePullPolicy: Always
